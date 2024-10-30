@@ -1,68 +1,61 @@
-﻿namespace CinemaBookingSystem;
-
-internal class Program
+﻿namespace CinemaBookingSystem
 {
-    static void Main(string[] args)
+    internal class Program
     {
-        int ticketPrice = 50;
-        Console.WriteLine("Welcome To Ticket Booking");
-        Console.WriteLine("Ticket Price for today is {0}", ticketPrice);
-        Console.WriteLine("Enter No. of tickets do you want to book");
-        int ticketCount = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Your total booking Price for {0} tickets is {1}", ticketCount, ticketCount * ticketPrice);
-        Console.WriteLine("Press 1 for ticket Confirmation ");
-        int confirmation = Convert.ToInt32(Console.ReadLine());
-        if (confirmation == 1)
+        static void Main(string[] args)
         {
-            Console.WriteLine("Ticket Confirmed...");
-        }
-        else
-        {
-            Console.WriteLine("Ticket Cancelled...");
+            int ticketPrice = 50;
+            Console.WriteLine("Welcome to the Ticket Booking System");
+            Console.WriteLine($"Today's Ticket Price: Rs {ticketPrice}");
 
-        }
-        Console.WriteLine(" cheack your seat number ");
-        int seat = Convert.ToInt32(Console.ReadLine());
-        if (confirmation == 1)
-        {
-            Console.WriteLine("");
+            Console.WriteLine("Enter the number of tickets you want to book:");
+            int ticketCount = Convert.ToInt32(Console.ReadLine());
 
-        }
-        if (ticketCount >= 1000)
-        {
-            Console.WriteLine("You will get offer on food and cold drinks!!!");
-        }
-        else
-        {
-            Console.WriteLine("NO any offer under 1000rs");
-        }
+            int totalPrice = ticketCount * ticketPrice;
+            Console.WriteLine($"Your total booking price for {ticketCount} tickets is Rs {totalPrice}");
 
-        int seat = 3;
+            Console.WriteLine("Press 1 to confirm your ticket booking, or any other key to cancel:");
+            int confirmation = Convert.ToInt32(Console.ReadLine());
 
-        switch (seat);
+            if (confirmation == 1)
+            {
+                Console.WriteLine("Tickets Confirmed!");
 
-        
+                
+                if (totalPrice >= 150)
+                {
+                    Console.WriteLine("Congratulations! You qualify for an offer on food and cold drinks.");
+                }
+                else
+                {
+                    Console.WriteLine("No offer available for bookings under Rs 150.");
+                }
+
+                
+                Console.WriteLine("Please select your seat type:");
+                Console.WriteLine("1. Front Seat\n2. Middle Seat\n3. Back Seat");
+                int seatChoice = Convert.ToInt32(Console.ReadLine());
+
+                switch (seatChoice)
+                {
+                    
+                }
+            }
+            else
+            {
+                Console.WriteLine("Ticket Booking Cancelled.");
+            }
+            Console.WriteLine("Select your Meal:");
+            Console.WriteLine("1.Cold Drink\n2.2.Frnch Fries\n3.3.Popcorn");
+            int mealChoice= Convert.ToInt32(Console.ReadLine());
+
+            switch (mealChoice)
+            {
 
 
-        {
 
-            Console.WriteLine("Front Seat:{FrontSeat},Middle Seat:{MiddleSeat}, Back Seat:{BackSeat}");
-        }
-        switch (Seats)
-        {
-            case 1 Frontseat:
 
-                Console.WriteLine(" Front Seat Booked ");
-                break;
-            case 2  MiddleSeat:
-
-                Console.WriteLine("Middle seat booked.");
-                break;
-            case 3 BackSeat:
-
-                Console.WriteLine("Back seat booked.");
-              break;
-        }
+        }   }
     }
 }
 
@@ -70,4 +63,4 @@ internal class Program
 
 
 
-    
+
